@@ -1,0 +1,53 @@
+@use '../../assets/styles/mixin.module' as mixin;
+@use '../../assets/styles/variable.module' as variable;
+
+.containerHeader {
+    @include mixin.flexCommon(space-between, center, 10px);
+    height: 83px;
+    width: 1250px;
+}
+
+.boxIconSocial {
+    @include mixin.customButton(26px, 26px, 0, variable.$primary_color, none);
+}
+
+.boxIconFeature {
+    @include mixin.customButton(26px, 26px, 0, variable.$white_color, transparent);
+}
+
+.containerBoxIcon {
+    @include mixin.flexCommon(center, center, 15px)
+}
+
+.containerHeaderItem {
+    @include mixin.flexCommon(center, center, 30px)
+}
+
+.containerMenuItem {
+    @include mixin.flexCommon(center, center, 30px)
+}
+
+.menuItem {
+    color: variable.$primary_color;
+    font-size: 18px;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+.menuItem::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: variable.$primary_color;
+    display: block;
+    margin-top: 10px;
+    transform-origin: right;
+    transform: scale(0);
+    opacity: 0;
+    transition: transform ease .5s, opacity ease .5s;
+}
+
+.menuItem:hover::after {
+    transform: scale(1);
+    opacity: 1
+}

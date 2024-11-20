@@ -1,0 +1,21 @@
+@mixin radiusCommon ($radius: 10px) {
+    border-radius: $radius;
+}
+
+@mixin customButton ($w, $h, $b, $backgroundColor, $borderColor) {
+    @include flexCommon(center, center, 10px);
+    @include radiusCommon(50%);
+    cursor: pointer;
+    background-color: $backgroundColor;
+    width: $w;
+    height: $h;
+    border: $b solid $borderColor;
+}
+
+@mixin flexCommon ($x, $y, $gap: 0px, $wrap: nowrap) {
+    display: flex;
+    align-items: $y;
+    justify-content: $x;
+    flex-wrap: $wrap;
+    gap: $gap;
+}
