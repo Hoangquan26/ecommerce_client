@@ -1,6 +1,13 @@
 @use '../../assets/styles/mixin.module' as mixin;
 @use '../../assets/styles/variable.module' as variable;
 
+.containerWrapper {
+    @include mixin.flexCommon(center, center, 0px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
 .containerHeader {
     @include mixin.flexCommon(space-between, center, 10px);
     height: 83px;
@@ -8,11 +15,11 @@
 }
 
 .boxIconSocial {
-    @include mixin.customButton(26px, 26px, 0, variable.$primary_color, none);
+    @include mixin.customButton(26px, 26px, 0, variable.$primary_color, none, 50%);
 }
 
 .boxIconFeature {
-    @include mixin.customButton(26px, 26px, 0, variable.$white_color, transparent);
+    @include mixin.customButton(26px, 26px, 0, transparent, transparent, 0);
 }
 
 .containerBoxIcon {
@@ -49,5 +56,5 @@
 
 .menuItem:hover::after {
     transform: scale(1);
-    opacity: 1
+    opacity: 1;
 }

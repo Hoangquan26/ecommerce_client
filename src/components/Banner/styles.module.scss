@@ -1,0 +1,30 @@
+@use '@styles/mixin.module' as mixin;
+@use '@styles/variable.module' as variable;
+.container {
+    background-image: url(../../assets/images/bavkgroundBanner.jpeg);
+    min-height: 750px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include mixin.flexCommon(center, center, 0px);
+}
+
+.content {
+    @include mixin.flexCommon(center, center, 25px, nowrap, column);
+    
+}
+
+.tilte {
+    font-size: 42px;
+    font-weight: 400;
+    color: variable.$four_color;
+    margin: 0;
+}
+
+.description {
+    color: variable.$thr_color;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 10px;
+}

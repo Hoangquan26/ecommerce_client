@@ -1,0 +1,43 @@
+@use "@styles/mixin.module" as mixin;
+@use "@styles/variable.module" as variable;
+.container {
+    @include mixin.flexCommon(center, start, 5px, nowrap, column);
+    cursor: pointer;
+    width: calc((100% / 4) - 20px);
+    box-sizing: border-box;
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 353px;
+    }
+    .imageContainer {
+        @include mixin.radiusCommon(4px);
+        overflow: hidden;
+        position: relative;
+    }
+    .preImage {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transition: opacity ease .3s;
+    }
+    .imageContainer:hover .preImage {
+        opacity: 1;
+    }
+
+    .contentContainer {
+        @include mixin.flexCommon(center, start, 10px, nowrap, column);
+    }
+    .name_text {
+        font-weight: 400;
+        color: variable.$four_color;
+    }
+
+    .price_text {
+        color: variable.$thr_color;
+    }
+}
+

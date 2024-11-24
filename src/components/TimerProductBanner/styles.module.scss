@@ -1,0 +1,33 @@
+@use '@styles/mixin.module' as mixin;
+@use '@styles/variable.module' as variable;
+.container {
+    background-image: url(../../assets/images/Products/photo-of-man-wearing-white-hoodie-5474310.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+    width: calc(100% / 2);
+    padding: 10px;
+    position: relative;
+    @include mixin.flexCommon(center, center, 20px)
+}
+
+.countdownContainer {
+    @include mixin.flexCommon(center, center, 10px);
+}
+.desContainer {
+    @include mixin.flexCommon(center, center, 20px, nowrap, column);
+    z-index: 1;
+}
+.container:hover .shadowBox {
+    background-color: variable.$primary_color;
+    opacity: .1;
+}
+.shadowBox {
+    @include mixin.shadowBox();
+}
+
+.title {
+    font-weight: 400;
+    font-size: 28px;
+}

@@ -1,0 +1,6 @@
+@use "@styles/mixin.module" as mixin;
+.container {
+    @include mixin.flexCommon(center, stretch, 20px, wrap);
+    padding: 15px;
+    margin-top: 15px;
+}

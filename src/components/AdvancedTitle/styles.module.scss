@@ -1,0 +1,32 @@
+@use "@styles/mixin.module" as mixin;
+@use "@styles/variable.module" as variable;
+.container {
+    margin: 65px 0 15px;
+    width: 100%;
+    padding: 15px;
+}
+
+.header {
+    @include mixin.flexCommon(center, center, 10px, nowrap, column);
+}
+
+.titleWrapper {
+    @include mixin.flexCommon(center, center, 40px);
+    width: 100%;
+}
+
+.title {
+    margin: 0;
+    font-weight: 400;
+    color: variable.$primary_color;
+    font-size: 28px;
+}
+
+.des {
+    margin: 0;
+    color: variable.$thr_color;
+}
+
+.doubledLine {
+    @include mixin.doubledLine()
+}

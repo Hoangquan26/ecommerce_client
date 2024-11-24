@@ -1,0 +1,28 @@
+@use "@styles/mixin.module" as mixin;
+@use "@styles/variable.module" as variable;
+
+.container {
+    @include mixin.flexCommon(center, center, 30px);
+    background-color: variable.$primary_color;
+    padding: 20px 55px;
+    margin-top: -75px;
+}
+.infoCard {
+    @include mixin.flexCommon(center, center, 30px);
+}
+.infoCardContainer{
+    padding: 10px;
+    @include mixin.flexCommon(center, flex-start, 10px, nowrap, column);
+}
+
+.infoCardTitle {
+    color: variable.$white_color;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.infoCardDescription {  
+    margin: 0;
+    color: variable.$sub_secondary_color;
+}

@@ -1,0 +1,30 @@
+@use "@styles/mixin.module" as mixin;
+@use "@styles/variable.module" as variable;
+
+.container {
+    margin-top: 100px;
+    @include mixin.flexCommon(center, center, 20px);
+  
+    .title {
+        color: variable.$four_color;
+        font-size: 32px;
+        font-weight: 400;
+    };
+    .des {
+        color: variable.$thr_color;
+        font-size: 16px;
+    };
+}
+
+.contentContainer {
+    text-align: center;
+    @include mixin.flexCommon(center, center, 20px, nowrap, column);
+    flex: 0 0 250px;
+}
+
+
+.boxImage {
+    padding: 0 160px;
+    flex: 1 1 100%;
+    @include mixin.flexCommon(center, center, 20px);
+}

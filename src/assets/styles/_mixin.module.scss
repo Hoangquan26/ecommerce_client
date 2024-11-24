@@ -2,9 +2,9 @@
     border-radius: $radius;
 }
 
-@mixin customButton ($w, $h, $b, $backgroundColor, $borderColor) {
+@mixin customButton ($w, $h, $b, $backgroundColor, $borderColor, $radius) {
     @include flexCommon(center, center, 10px);
-    @include radiusCommon(50%);
+    @include radiusCommon($radius);
     cursor: pointer;
     background-color: $backgroundColor;
     width: $w;
@@ -12,10 +12,30 @@
     border: $b solid $borderColor;
 }
 
-@mixin flexCommon ($x, $y, $gap: 0px, $wrap: nowrap) {
+@mixin flexCommon ($x, $y, $gap: 0px, $wrap: nowrap, $direction: row) {
     display: flex;
     align-items: $y;
     justify-content: $x;
     flex-wrap: $wrap;
     gap: $gap;
+    flex-direction: $direction;
+}
+
+@mixin doubledLine ($color: #E1E1E1) {
+    width: 100%;
+    height: 3px;
+    border-width: 1px 0px 1px 0px;
+    border-style: solid;
+    border-color: $color;
+}
+
+@mixin shadowBox () {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: transparent;
+    opacity: 0;
+    transition: background-color ease .3s, opacity ease .3s;
 }
