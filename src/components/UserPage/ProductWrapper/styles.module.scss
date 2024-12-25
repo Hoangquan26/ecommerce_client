@@ -1,0 +1,13 @@
+@use "@styles/mixin.module" as mixin;
+@use "@styles/variable.module" as variable; 
+
+.container {
+    background-color: white;
+    padding: 10px;
+}
+.title {
+    font-size: 14px;
+    font-weight: 400;
+    color: variable.$thr_color;
+}
+

@@ -1,0 +1,34 @@
+@use "@styles/mixin.module" as mixin;
+@use "@styles/variable.module" as variable;
+
+.container {
+    height: 100%;
+    @include mixin.flexCommon(start, center, 40px, nowrap, column);
+    
+    .content {
+        flex-grow: 1;
+        @include mixin.flexCommon(start, center, 20px, nowrap, column);
+    }
+
+    .productWrapper {
+        flex-grow: 1;
+    }
+
+    .btnWrapper {
+        width: 100%;
+        @include mixin.flexCommon(center, center, 20px, nowrap, column);
+        align-self: end;
+        .totalWrapper {
+            width: 100%;
+            @include mixin.flexCommon(space-between, center, 0);
+            color: variable.$primary_color;
+            font-size: 16px;
+            h1 {
+                
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@use '@styles/mixin.module' as mixin;
+@use '@styles/variable.module' as variable;
+.container {
+    @include mixin.flexCommon(center, center, 40px, nowrap, column);
+    .detail {
+        text-align: left;
+        color: variable.$four_color;
+    }
+}

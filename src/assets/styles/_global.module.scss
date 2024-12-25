@@ -12,3 +12,9 @@ h1, h2, h3 {
 p {
     margin: 0;
 }
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-reveal-button {
+  display: none;
+}

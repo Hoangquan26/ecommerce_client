@@ -19,13 +19,12 @@ export default function HomePage(){
     }, [])
 
     const {container} = styles
-    return <div className={container}>
-        <Header/>
+    return <>
         <Banner/>
         <Info/>
         <AdvancedTitle/>
         <ListProduct products={listProduct}/>
         <SaleHomePage/>
-        <Footer/>
-    </div>
+        
+    </>
 }

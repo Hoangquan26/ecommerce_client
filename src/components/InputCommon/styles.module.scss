@@ -1,0 +1,40 @@
+@use '@styles/mixin.module' as mixin;
+@use '@styles/variable.module' as variable;
+.container {
+    @include mixin.flexCommon(start, start, 5px, nowrap, column);
+    width: 100%;
+
+    .labelWrapper {
+        color: variable.$four_color;
+        font-size: 14px;
+    }
+
+    .inputWrapper {
+        position: relative;
+        width: 100%;
+        input {
+            width: 100%;
+            outline: none;
+            padding: 10px 0px 10px 10px ;
+            font-size: 16px;
+            border: 1px solid #e1e1e1;
+            color: variable.$four_color;
+            &:focus {
+                border: 1px solid variable.$primary_color;
+            }
+        }
+
+        .hintPassword {
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .errorMessage{
+        color: red;
+        font-size: 12px;
+    }
+}

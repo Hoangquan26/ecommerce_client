@@ -6,7 +6,7 @@ import ytbIcon from '@icons/svgs/ytbico.svg'
 import reloadIcon from '@icons/svgs/reload.svg'
 import heartIcon from '@icons/svgs/heart.svg'
 import cartIcon from '@icons/svgs/cart.svg'
-export default function BoxIcon ({type, href, style = 'Social'}) {
+export default function BoxIcon ({type, href, action, style = 'Social', ...props}) {
 
     const {boxIconSocial, boxIconFeature} = styles
 
@@ -23,9 +23,8 @@ export default function BoxIcon ({type, href, style = 'Social'}) {
         "Social": boxIconSocial,
         "Feature": boxIconFeature
     }
-    return <div>
-        <button className={handleRenderStyle[style]}>
+    return <button className={handleRenderStyle[style]} onClick={action} {...props}>
             <img src={handleRenderIcon[type] }></img>
         </button>
-    </div>
+    
 }

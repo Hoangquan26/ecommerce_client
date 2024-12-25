@@ -6,6 +6,7 @@ const numberToEuro = (number) => {
     }).format(number)
 }
 
+
 export {
     numberToEuro
 }

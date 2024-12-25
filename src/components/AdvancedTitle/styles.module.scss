@@ -30,3 +30,7 @@
 .doubledLine {
     @include mixin.doubledLine()
 }
+
+.commonLine {
+    @include mixin.commonLine()
+}

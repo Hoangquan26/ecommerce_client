@@ -1,0 +1,36 @@
+@use "@styles/mixin.module" as mixin;
+@use "@styles/variable.module" as variable; 
+
+.title {
+    color: variable.$primary_color;
+    font-size: 18px;
+    font-weight: 400;    
+}
+
+.main_content_wrapper {
+    @include mixin.flexCommon(start, start, 20px, nowrap, column)
+}
+
+.main_content {
+    @include mixin.flexCommon(start, start, 10px, nowrap, column)
+}
+
+.commonText {
+    font-size: 14px;
+    color: variable.$fifth_color;
+    font-weight: 300;
+}
+
+a.commonText {
+    font-weight: 500;
+    transition: color ease .1s;
+    &:hover {
+        color: variable.$primary_color;
+    }
+}
+
+.productWrapper {
+    margin-top: 10px;
+    background-color: variable.$border_color;
+    padding: 5px;
+}

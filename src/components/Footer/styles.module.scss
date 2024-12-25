@@ -1,0 +1,39 @@
+@use '@styles/variable.module' as variable;
+@use '@styles/mixin.module' as mixin;
+
+.container {
+    @include mixin.flexCommon(center, center, 40px, nowrap, column);
+    background-color: variable.$background_color;
+    padding: 60px;
+}
+
+.title {
+    color: variable.$white_color;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.linkWrapper {
+    @include mixin.flexCommon(center, center, 45px);
+    a {
+        text-decoration: none;
+        color: variable.$white_color;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+.guarantedWrapper {
+    @include mixin.flexCommon(center, center, 20px, nowrap, column);
+    p {
+        color: variable.$white_color;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+.copyright {
+    color: variable.$white_color;
+    font-size: 16px;
+    font-weight: 400;
+}

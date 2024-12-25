@@ -1,0 +1,60 @@
+@use "@styles/mixin.module" as mixin;
+@use "@styles/variable.module" as variable;
+
+.container {
+    @include mixin.flexCommon(center, start, 25px);
+    padding: 20px 12px;
+    overflow: hidden;
+    transition: background-color ease .5s;
+    position: relative;
+    &:hover {
+        background-color: #eeeeeee4;
+    }
+    &:hover>.icoWrapper {
+        transform: translateX(0);
+        opacity: .7;
+    }
+    .icoWrapper {
+        cursor: pointer;
+        @include mixin.flexCommon(center, center, 0);
+        font-size: 24px;
+        color: variable.$fifth_color;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        transform: translateX(100px);
+        opacity: 0;
+        transition: transform ease .5s, opacity ease .5s;
+    }
+    .productWrapper {
+        max-width: 100px;
+        img {
+            object-fit: cover;
+            width: 100%;
+            max-width: 5rem;
+        }
+    }
+
+    .contentWrapper {
+        cursor: pointer;
+        padding-right: 25px;
+        .title {
+            max-width: 200px;
+            font-size: 16px;
+            color: variable.$primary_color;
+            font-weight: 400;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            display: block;
+        }
+    
+        .description {
+            cursor: pointer;
+            margin-top: 10px;
+            color: variable.$four_color;
+            font-size: 14px;
+        }
+    }
+   
+}

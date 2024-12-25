@@ -7,8 +7,35 @@
     top: 0;
     left: 0;
     right: 0;
+    transition: background-color ease .5s, transform ease .5s;
+    user-select: none;
 }
+
+.logoLink {
+    text-decoration: none;
+    color: variable.$primary_color;
+}
+.onFixed {
+    position: fixed;
+    top: -83px;
+    transform: translateY(83px);
+    z-index: 999;
+    box-shadow: 2px 0px 12px 0px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
+    .background {
+        background-color: variable.$white_color;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: .9;
+        transition: background-color ease .5s;
+    }
+}
+
 .containerHeader {
+    position: relative;
     @include mixin.flexCommon(space-between, center, 10px);
     height: 83px;
     width: 1250px;

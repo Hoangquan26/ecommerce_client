@@ -2,9 +2,9 @@ const dataBoxIcon = [
     {type: 'fb', href: '#'},
     {type: 'ig', href: '#'},
     {type: 'ytb', href: '#'},
-    {type: 'reload', href: '#'},
-    {type: 'heart', href: '#'},
-    {type: 'cart', href: '#'},
+    {type: 'reload', href: '#', action: 'compare'},
+    {type: 'heart', href: '#', action: 'wishlist'},
+    {type: 'cart', href: '#', action: 'cart'},
 ]
 
 const dataMenu = [
@@ -13,8 +13,7 @@ const dataMenu = [
     { content: 'About us', href: '#'},
     { content: 'Contacts', href: '#'},
     { content: 'Search', href: '#'},
-    { content: 'Sign in', href: '#'},
-    
+    { content: 'Sign in', href: '#', action: 'access', priority: 'userinfo'},
 ]
 
 export {

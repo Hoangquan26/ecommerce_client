@@ -1,0 +1,10 @@
+@use "@styles/mixin.module" as mixin;
+@use "@styles/variable.module" as variable; 
+
+.container {
+    width: 100%;
+}
+
+.inputWrapper {
+    @include mixin.flexCommon(start, start, 15px, nowrap, column);
+}

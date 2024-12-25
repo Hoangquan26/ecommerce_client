@@ -1,0 +1,7 @@
+
+@use '@styles/mixin.module.scss' as mixin;
+@use '@styles/variable.module.scss' as variable;
+.container {
+    @include mixin.flexCommon(start, center, 10px);
+    color: variable.$four_color;
+}

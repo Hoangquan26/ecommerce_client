@@ -2,9 +2,9 @@
 @use "@styles/variable.module" as variable;
 
 .container {
-    margin-top: 100px;
     @include mixin.flexCommon(center, center, 20px);
-  
+    padding: 100px 0;
+    overflow: hidden;
     .title {
         color: variable.$four_color;
         font-size: 32px;
@@ -27,4 +27,8 @@
     padding: 0 160px;
     flex: 1 1 100%;
     @include mixin.flexCommon(center, center, 20px);
+}
+
+.image {
+    transition: all ease .5s;
 }

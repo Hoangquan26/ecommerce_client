@@ -1,0 +1,63 @@
+@use "@styles/mixin.module" as mixin;
+@use "@styles/variable.module" as variable; 
+
+.container {
+    width: 100%;
+    gap: 20px;
+    .containerHeader {
+        padding: 10px 15px;
+        background-color: variable.$background_b_color;
+        @include mixin.flexCommon(space-between, center, 0);
+        .title {
+            margin: 0;
+            font-size: 16px;
+            color: variable.$thr_color;
+            font-weight: 400;
+        }
+
+        .actionWrapper{
+            @include mixin.flexCommon(space-between, center, 10px);
+            .actionBtn {
+                background-color: transparent;
+                border: 0;
+                cursor: pointer;
+            }
+
+            .actionBtn:disabled {
+                color: variable.$secondary_color;
+            }
+        }
+        .actionWrapper>span {
+            cursor: pointer;
+        }
+    }
+
+    .containerContent {
+        width: 100%;
+        font-size: 14px;
+        color: variable.$secondary_color;
+        padding: 15px;
+        @include mixin.flexCommon(start, start, 15px, nowrap, column);
+        .contentName {
+            margin: 0;
+        }
+
+        .contentItem {
+            @include mixin.flexCommon(start, start, 0);
+            width: 100%;
+        }
+
+        .contentItem span:first-child  {
+            width: 35%;
+            flex-shrink: 0;
+        }
+
+    }
+}
+
+.container.defaultAddress {
+    .title {
+        font-weight: 500;
+        color: variable.$four_color;
+    }
+}

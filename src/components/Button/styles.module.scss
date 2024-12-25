@@ -1,6 +1,7 @@
 @use "@styles/mixin.module" as mixin;
 @use "@styles/variable.module" as variable;
 .button {
+    user-select: none;
     font-family: "Roboto Mono", monospace;
     padding: 13px 45px;
     font-size: 16px;
@@ -10,19 +11,19 @@
 }
 
 .primaryBtn {
-    @include mixin.customButton(auto, auto, 1px, variable.$primary_color, none, 5px);
+    @include mixin.customButton(100%, auto, 1px, variable.$primary_color, transparent, 5px);
     color: variable.$white_color;
     &:hover {
-        @include mixin.customButton(auto, auto, 1px, transparent, variable.$primary_color, 5px);
+        @include mixin.customButton(100%, auto, 1px, transparent, variable.$primary_color, 5px);
         color: variable.$primary_color
     }
 }
 
 .secondaryBtn {
-    @include mixin.customButton(auto, auto, 1px, transparent, variable.$primary_color, 5px);
+    @include mixin.customButton(100%, auto, 1px, transparent, variable.$primary_color, 5px);
     color: variable.$primary_color;
     &:hover {
-        @include mixin.customButton(auto, auto, 1px,  variable.$primary_color, variable.$primary_color, 5px);
+        @include mixin.customButton(100%, auto, 1px,  variable.$primary_color, variable.$primary_color, 5px);
         color: variable.$white_color
     }
 }

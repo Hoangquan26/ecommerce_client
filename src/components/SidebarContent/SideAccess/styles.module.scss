@@ -1,0 +1,18 @@
+@use '@styles/mixin.module' as mixin;
+@use '@styles/variable.module' as variable;
+.container {
+    @include mixin.flexCommon(center, center, 30px, nowrap, column);
+
+    .form {
+        @include mixin.flexCommon(center, start, 20px, nowrap, column);
+        width: 100%;
+        
+        .checboxWrapper {
+            display: flex;
+            gap: 10px;
+            font-size: 14px;
+            color: variable.$four_color; 
+            margin: 5px 0;
+        }
+    }
+}

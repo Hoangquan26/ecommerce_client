@@ -1,0 +1,22 @@
+@use "@styles/mixin.module" as mixin;
+@use "@styles/variable.module" as variable; 
+
+.container {
+    margin-top: 83px;
+    min-height: 500px;
+}
+
+.contentWrapper {
+   
+    @include mixin.flexCommon(center, center, 0, nowrap, column);
+    .title {
+        font-weight: 400;
+        text-align: center;
+    }
+    .spaceBetween {
+        padding: 40px;
+    }
+    .line {
+        @include mixin.doubledLine()
+    }
+}

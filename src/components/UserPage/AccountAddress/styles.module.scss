@@ -1,0 +1,21 @@
+@use '@styles/mixin.module.scss' as mixin;
+@use '@styles/variable.module.scss' as variable;
+
+.container {
+    width: 100%;
+    @include mixin.flexCommon(start, start, 40px);
+}
+
+.addressList{
+    flex-grow: 1;
+    @include mixin.flexCommon(start, start, 10px, nowrap, column);
+}
+
+.actionList{
+    width: 40%;
+    @include mixin.flexCommon(start, start, 20px, nowrap, column);
+}
+
+.btnWrapper {
+    max-width: 250px;
+}

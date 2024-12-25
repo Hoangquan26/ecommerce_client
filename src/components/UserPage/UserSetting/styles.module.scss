@@ -1,0 +1,37 @@
+@use "@styles/mixin.module" as mixin;
+@use "@styles/variable.module" as variable; 
+
+.container {
+    width: 1200px;
+    a {
+        text-decoration: none;
+        color: variable.$fifth_color;
+        font-weight: 300;
+    }
+    @include mixin.flexCommon(center, start, 120px);
+    .linkWrapper {
+        @include mixin.flexCommon(center, start, 10px, nowrap, column);
+        list-style: none;
+        padding: 0;
+        ul {
+            width: 100%;
+        }
+        a {
+            font-size: 14px;
+        }
+        .linkItem:hover a{
+            color: variable.$primary_color;
+            transition: color ease .1s, weight ease .1s;
+            font-weight: 400;
+        }
+    }
+    .routeWrapper {
+        flex-grow: 1;
+    }
+}
+
+.title {
+    color: variable.$primary_color;
+    font-size: 18px;
+    font-weight: 400;    
+}

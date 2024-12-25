@@ -1,0 +1,20 @@
+@use "@styles/mixin.module" as mixin;
+@use "@styles/variable.module" as variable;
+
+.container {
+    @include mixin.flexCommon(center, center, 40px, nowrap, column);
+
+    .header {
+        @include mixin.flexCommon(center, center, 15px, nowrap, column);
+        font-size: 28px;
+        .title{
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+
+    .content {
+        @include mixin.flexCommon(center, center, 20px, nowrap, column);
+
+    }
+}

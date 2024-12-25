@@ -1,0 +1,50 @@
+@use "@styles/mixin.module" as mixin;
+@use "@styles/variable.module" as variable;
+
+.container {
+    position: relative;
+    
+    .overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #0000004d;
+        z-index: 1000;
+        transition: all ease .3s;
+    }
+    .side {
+        z-index: 1001;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 370px;
+        background-color: variable.$white_color;
+        bottom: 0;
+        transform: translateX(500px);
+        padding: 40px 20px;
+        transition: transform ease .3s;
+        .boxIcon {
+            position: absolute;
+            top: 30px;
+            left: -60px;
+            background-color: variable.$white_color;
+            height: 40px;
+            width: 40px;
+            @include mixin.radiusCommon(50%);
+            @include mixin.flexCommon(center, center);
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color ease .3s;
+            color: variable.$primary_color;
+            &:hover {
+                background-color: variable.$sub_secondary_color;
+            }
+        }
+    }
+
+    .slideBar {
+        transform: translateX(0);
+    }
+}
